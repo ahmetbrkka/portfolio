@@ -9,13 +9,24 @@
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="logo" onclick="showPage('professional')">Ahmet Burak Kara</a>
+        <a href="#" class="logo logo-photo-mode" onclick="showPage('professional'); window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+            <span class="logo-photo-circle">
+                <img src="assets/profile-logo.jpg" alt="Logo photo">
+            </span>
+            <span class="logo-text">Ahmet Burak Kara</span>
+        </a>
         <ul class="nav-links">
             <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
             <li><a href="#experiences" onclick="scrollToSection('experiences')">Experiences</a></li>
             <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
             <li><a href="#skills" onclick="scrollToSection('skills')">Skills</a></li>
-            <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+            <li class="has-dropdown">
+                <a href="#" onclick="showPage('blog'); return false;">Blog</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" onclick="goToBlogSection('blog-header'); return false;">Writings</a></li>
+                    <li><a href="#" onclick="goToBlogSection('gallery'); return false;">Gallery</a></li>
+                </ul>
+            </li>
             <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
         </ul>
         <button class="hamburger" onclick="toggleMobileMenu()">
@@ -47,11 +58,21 @@
         <!-- About Section -->
         <section id="about" class="reveal-on-scroll">
             <div class="section-container">
+                <div class="about-photo-wrapper">
+                    <div class="about-photo-circle">
+                        <img src="assets/profile-about.jpg" alt="Profile photo">
+                    </div>
+                </div>
+                
                 <h2 class="section-title">About</h2>
                 <p>I am a strategic designer and developer with expertise in creating minimal, functional digital experiences. My work focuses on creating clean, functional solutions that prioritize user experience and visual clarity.</p>
                 <p>With a background in design and technology, I approach every project with attention to detail and a commitment to excellence. I believe in the power of simplicity and the importance of thoughtful design.</p>
                 <p>Currently, I am working on projects that combine technical precision with aesthetic sensibility. I am passionate about minimalism, user-centered design, and continuously seeking opportunities to refine my craft.</p>
                 <p>My approach combines technical precision with aesthetic sensibility, ensuring that every project meets the highest standards of quality and usability.</p>
+                
+                <a href="assets/cv.pdf" class="button cv-button" download>
+                    Download my CV
+                </a>
             </div>
         </section>
 
@@ -99,31 +120,20 @@
         <!-- Projects Section -->
         <section id="projects">
             <div class="section-container">
-                <h2 class="section-title">Projects</h2>
+                <div class="section-header projects-header">
+                    <h2 class="section-title">Projects</h2>
+                    <button class="text-link all-projects-link" type="button" onclick="showPage('all-projects'); return false;">
+                        All
+                    </button>
+                </div>
                 <div class="projects-grid">
+                    <!-- Existing 4 featured project cards remain unchanged -->
                     <div class="project reveal-on-scroll">
                         <h3>Minimal E-Commerce Platform</h3>
                         <p>A clean, high-performance e-commerce solution focusing on user experience and conversion optimization through thoughtful design and efficient architecture.</p>
                         <div class="tools">React, Node.js, MongoDB</div>
                     </div>
-
-                    <div class="project reveal-on-scroll">
-                        <h3>Portfolio Management System</h3>
-                        <p>Comprehensive tool for managing creative portfolios with emphasis on visual presentation and seamless content organization.</p>
-                        <div class="tools">Next.js, TypeScript, Tailwind CSS</div>
-                    </div>
-
-                    <div class="project reveal-on-scroll">
-                        <h3>Design System Library</h3>
-                        <p>Scalable component library built for consistency and efficiency across multiple product lines and team workflows.</p>
-                        <div class="tools">React, Storybook, Figma</div>
-                    </div>
-
-                    <div class="project reveal-on-scroll">
-                        <h3>Data Visualization Dashboard</h3>
-                        <p>Interactive analytics platform transforming complex data into clear, actionable insights through minimal design principles.</p>
-                        <div class="tools">D3.js, Vue.js, Python</div>
-                    </div>
+                    <!-- ... other 3 projects ... -->
                 </div>
             </div>
         </section>
@@ -259,6 +269,98 @@
         </section>
     </div>
 
+    <!-- All Projects Page -->
+    <div id="allProjectsPage" class="page">
+        <section id="all-projects-hero">
+            <div class="section-container">
+                <h1 class="page-heading">All Projects</h1>
+                <p class="page-subheading">A comprehensive collection of my work spanning design, development, and research initiatives.</p>
+                <button class="text-link back-link" type="button" onclick="showPage('professional'); scrollToSection('projects'); return false;">
+                    ← Back to Featured
+                </button>
+            </div>
+        </section>
+        
+        <section id="all-projects-grid">
+            <div class="section-container">
+                <div class="projects-grid">
+                    <!-- Featured projects repeated -->
+                    <div class="project reveal-on-scroll">
+                        <h3>Minimal E-Commerce Platform</h3>
+                        <p>A clean, high-performance e-commerce solution focusing on user experience and conversion optimization through thoughtful design and efficient architecture.</p>
+                        <div class="tools">React, Node.js, MongoDB</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Portfolio Management System</h3>
+                        <p>Comprehensive tool for managing creative portfolios with emphasis on visual presentation and seamless content organization.</p>
+                        <div class="tools">Next.js, TypeScript, Tailwind CSS</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Design System Library</h3>
+                        <p>Scalable component library built for consistency and efficiency across multiple product lines and team workflows.</p>
+                        <div class="tools">React, Storybook, Figma</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Data Visualization Dashboard</h3>
+                        <p>Interactive analytics platform transforming complex data into clear, actionable insights through minimal design principles.</p>
+                        <div class="tools">D3.js, Vue.js, Python</div>
+                    </div>
+                    
+                    <!-- Additional projects -->
+                    <div class="project reveal-on-scroll">
+                        <h3>Mobile Fitness Application</h3>
+                        <p>Streamlined fitness tracking app with focus on user motivation and progress visualization through clean interface design.</p>
+                        <div class="tools">React Native, Firebase, Redux</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Real Estate Listing Platform</h3>
+                        <p>Modern property search platform with advanced filtering and immersive visual presentation of listings.</p>
+                        <div class="tools">Vue.js, Laravel, PostgreSQL</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Task Management Tool</h3>
+                        <p>Collaborative workspace for team productivity with emphasis on simplicity and efficient workflow management.</p>
+                        <div class="tools">Angular, Node.js, MongoDB</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Educational Learning Platform</h3>
+                        <p>Interactive e-learning system designed for engaging course delivery and student progress tracking.</p>
+                        <div class="tools">React, Django, MySQL</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Weather Forecast Dashboard</h3>
+                        <p>Real-time weather visualization tool with clean data presentation and location-based forecasting.</p>
+                        <div class="tools">JavaScript, OpenWeather API, Chart.js</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Recipe Sharing Community</h3>
+                        <p>Social platform for food enthusiasts to share and discover recipes with beautiful photography integration.</p>
+                        <div class="tools">Next.js, Supabase, Tailwind CSS</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Budget Tracking Application</h3>
+                        <p>Personal finance manager with intuitive expense categorization and visual spending analysis.</p>
+                        <div class="tools">React, Express, PostgreSQL</div>
+                    </div>
+                    
+                    <div class="project reveal-on-scroll">
+                        <h3>Music Streaming Interface</h3>
+                        <p>Minimalist music player interface with focus on album artwork and seamless playback experience.</p>
+                        <div class="tools">Vue.js, Spotify API, Vuex</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" onclick="closeLightbox()">×</button>

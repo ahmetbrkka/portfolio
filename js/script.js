@@ -1,5 +1,5 @@
 // ================================
-// NAVIGATION SCROLL EFFECT
+// NAVIGATION SCROLL EFFECT + LOGO MODE
 // ================================
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
@@ -8,6 +8,9 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.classList.remove('scrolled');
     }
+    
+    // Update logo mode on scroll
+    updateLogoMode();
 });
 
 // ================================
@@ -19,34 +22,35 @@ function toggleMobileMenu() {
 }
 
 // ================================
-// PAGE SWITCHING
+// PAGE SWITCHING (EXTENDED FOR 3 PAGES)
 // ================================
 function showPage(page) {
     const professionalPage = document.getElementById('professionalPage');
     const blogPage = document.getElementById('blogPage');
-    const currentPage = professionalPage.classList.contains('active') ? professionalPage : blogPage;
-    const nextPage = page === 'blog' ? blogPage : professionalPage;
+    const allProjectsPage = document.getElementById('allProjectsPage');
     
-    // Only proceed if switching to a different page
-    if (currentPage === nextPage) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-    }
+    // Remove active from all pages
+    professionalPage.classList.remove('active');
+    blogPage.classList.remove('active');
+    allProjectsPage.classList.remove('active');
     
-    // Hide current page immediately
-    currentPage.classList.remove('active');
-    
-    // Small delay to ensure display:none takes effect
+    // Add active to the target page after a tiny delay
     setTimeout(() => {
-        // Show and animate next page
-        nextPage.classList.add('active');
-        // Force reflow to trigger animation
-        void nextPage.offsetWidth;
-    }, 10);
+        if (page === 'blog') {
+            blogPage.classList.add('active');
+        } else if (page === 'all-projects') {
+            allProjectsPage.classList.add('active');
+        } else {
+            professionalPage.classList.add('active');
+        }
+        
+        // Update logo mode after page switch
+        updateLogoMode();
+    }, 50);
     
+    // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 // ================================
 // SMOOTH SCROLL TO SECTION
 // ================================
@@ -144,9 +148,11 @@ document.addEventListener('keydown', function(e) {
 });
 
 // ================================
-// SCROLL REVEAL ANIMATIONS
+// SCROLL REVEAL ANIMATIONS + INITIALIZE LOGO MODE ON LOAD (NEW)
 // ================================
 document.addEventListener('DOMContentLoaded', function() {
+    // Set initial logo mode
+    updateLogoMode();
     // Select all elements that should reveal on scroll
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     
@@ -173,3 +179,55 @@ document.addEventListener('DOMContentLoaded', function() {
         revealObserver.observe(element);
     });
 });
+
+// ================================
+// GO TO BLOG SECTION
+// ================================
+function goToBlogSection(sectionId) {
+    // Switch to blog page
+    showPage('blog');
+    
+    // Wait for page transition, then scroll to section
+    setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            const sectionTop = section.offsetTop - navHeight - 40;
+            window.scrollTo({ top: sectionTop, behavior: 'smooth' });
+        }
+    }, 300);
+}
+
+// ================================
+// UPDATE LOGO MODE (PHOTO/TEXT)
+// ================================
+function updateLogoMode() {
+    const logo = document.querySelector('.logo');
+    const professionalPage = document.getElementById('professionalPage');
+    const hero = document.getElementById('hero');
+    
+    if (!logo || !hero) return;
+    
+    // Check if we're on the professional page
+    const onProfessionalPage = professionalPage && professionalPage.classList.contains('active');
+    
+    if (onProfessionalPage) {
+        // Check scroll position relative to hero
+        const heroHeight = hero.offsetHeight;
+        const scrollThreshold = heroHeight * 0.7;
+        
+        if (window.scrollY < scrollThreshold) {
+            // Show photo mode (near top of professional page)
+            logo.classList.remove('logo-text-mode');
+            logo.classList.add('logo-photo-mode');
+        } else {
+            // Show text mode (scrolled past hero)
+            logo.classList.remove('logo-photo-mode');
+            logo.classList.add('logo-text-mode');
+        }
+    } else {
+        // On other pages (blog, all projects), always show text
+        logo.classList.remove('logo-photo-mode');
+        logo.classList.add('logo-text-mode');
+    }
+}
