@@ -257,120 +257,58 @@ function openBlogPost(postId) {
     // Blog post data
     const posts = {
         'post-1': {
-            title: 'The Power of Minimal Design',
-            date: 'January 15, 2025',
+            title: 'Analog Bilgisayarlar İle Derin Öğrenme',
+            date: 'January 10, 2023',
             content: `
-                <p>In a world saturated with visual noise, minimal design stands as a powerful statement of intentionality. Every element that remains on the page has earned its place through careful consideration and purpose.</p>
+                <p><em>MDB 302 Akademik Sunum Becerileri - Final Makalesi</em></p>
                 
-                <p>The philosophy of minimalism in design isn't about removing elements arbitrarily—it's about distilling an experience down to its essential components. When we strip away the unnecessary, what remains carries more weight and communicates more clearly.</p>
+                <h2>1. Giriş</h2>
                 
-                <h2>The Psychology of Space</h2>
+                <p>Yapay zeka ve derin öğrenme uygulamalarının oldukça gündemde ve kullanımda olduğu günümüzde, hali hazırda kullanılan yöntemlerin verimliliği ve hızları daha çok tartışılmaya başlandı. Derin öğrenme için kullanılan donanımlar için yakın zamanda ortaya çıkan gelişmeler; şu an kullanılanlar gibi daha genel amaçlı değil de; daha özel amaçlı, yani sadece derin öğrenme için kullanılabilmesi yönünde.</p>
                 
-                <p>Negative space, often called white space, is not empty space. It's an active element of design that gives breathing room to content and guides the eye through a visual hierarchy. In minimal design, this space becomes a crucial tool for creating emphasis and directing attention.</p>
+                <p>Günümüzde derin öğrenme algoritmaları, kullanılan donanıma göre zaten oldukça verimliler. Dolayısıyla genel olarak yapay zeka alanındaki bir sonraki büyük adım, yazılımsal değil de donanımsal olacağa benziyor.</p>
                 
-                <p>Users don't just see minimal design—they feel it. The calm, uncluttered interface reduces cognitive load and allows visitors to focus on what truly matters. This psychological benefit translates directly into better user experiences and higher engagement.</p>
+                <p>Peki bir analog bilgisayar nasıl çalışır? Basitçe anlatılacak olursa; 2 sayıyı toplamak için 3 adet kabloya ihtiyacımız var. 2 kablodan toplamak istediğimiz sayıların değeri kadar akım geçiririz. Ardından bu 2 kabloyu 3. bir kabloda birleştirip bu 3. kablodaki akımı ampermetre ile ölçeriz. Bulduğumuz sonuç toplama işleminin cevabı olur.</p>
                 
-                <h2>Practical Applications</h2>
+                <p>Bulduğumuz sonucu da bir başka sayıyla çarpmak istiyorsak da 3. kabloya bir direç bağlarız ve direncin uçlarındaki voltajı, voltmetre ile ölçeriz. Bulduğumuz sonuç çarpma işleminin cevabı olmuş olur. Bu toplama işlemini dijital bir bilgisayar yaklaşık 50 transistör ile yapabilir. Çarpma işlemi için ise 1000 transistöre ihtiyaç duyar.</p>
                 
-                <p>Implementing minimal design requires discipline. It means saying no to trends that don't serve the core purpose. It means testing ruthlessly and removing anything that doesn't actively contribute to the user's goals.</p>
+                <p>Burada, fark edileceği üzere, analog bilgisayarlarda neredeyse hiçbir zaman kesin değerlere ulaşılamaz. Çünkü girilen değerler, ayrık değil sürekli değerlerdir. Ayrıca dirençlerin veya ölçüm araçlarının her zaman bir hata payları olur. Ancak derin öğrenme uygulamalarında bu durum, bir problem olmaktan çıkabilir.</p>
                 
-                <p>The results speak for themselves: faster load times, clearer communication, and interfaces that age gracefully. Minimal design isn't a style—it's a commitment to clarity and user-centered thinking.</p>
-            `
-        },
-        'post-2': {
-            title: 'Notes from Tokyo',
-            date: 'January 10, 2025',
-            content: `
-                <p>Tokyo presents a fascinating paradox: a city where centuries-old temples sit alongside cutting-edge architecture, where traditional craftsmanship coexists with technological innovation.</p>
+                <p>Bir görüntü işleme algoritması; bir kedi resmine %98 yerine %95 kedidir dese bile, resimdeki şey hala kedidir. Yani donanımdaki hata payları sonucun kesinliğini minimal bir şekilde etkileyecek olsa bile sonucu değiştirmeyecektir. Kısaca analog bilgisayarlar derin öğrenme için biçilmiş kaftan gibi gözüküyorlar.</p>
                 
-                <p>Walking through the streets of Shibuya and then finding yourself in the quiet gardens of Meiji Shrine, you experience a culture that has mastered the art of honoring its past while embracing its future.</p>
+                <h2>2. Araştırmalar ve Çalışmalar</h2>
                 
-                <h2>Design Lessons from Japanese Culture</h2>
+                <p>Derin öğrenme uygulamalarında asıl işlem yükü matris çarpımlarıdır. Bundan dolayı bu uygulamalarda çoğunlukla GPU'lar kullanılır. Bunun nedeni, GPU'ların 3D render'lama ve oyun oynama için tasarlandıklarından, sahip oldukları yüksek paralel işlem güçleridir. CPU'lar ise GPU'lardan çok daha az sayıda çekirdeğe sahiptir. Bundan dolayı GPU'lar gibi çok sayıdaki işlemi paralel olarak yürütemezler.</p>
                 
-                <p>The Japanese concept of "ma" (間)—the appreciation of negative space and intervals—is visible everywhere. From the careful arrangement of a traditional kaiseki meal to the layout of a modern apartment, space itself is treated as a design element.</p>
+                <p>Tabi ki işlem gücünün yanı sıra, oluşturulacak donanımların verimliliği de çok önemli. Örneğin bir bilgisayarda; işlemciden RAM'e kadar olan veri transferi bus'lar ile sağlanır ve bu mesafenin kısalması, o donanımın hızını önemli ölçüde etkiler. Geleneksel dijital bilgisayarlar için hazırlanan derin ağlar, bu yüzden hafızaya erişimin en az olacağı şekilde tasarlanır.</p>
                 
-                <p>Attention to detail is not just a practice here; it's a cultural value. Every interaction, from the way receipts are handed to you with both hands to the precise folding of packaging, reflects a deep respect for the experience of others.</p>
+                <p>Analog bilgisayar teknolojisini nöral ağlar için kullanabilmek için çalışan bilim insanları; derin öğrenme algoritmalarını verimli bir şekilde kullanabilmek için, "memristör crossbar array" adlı bir yapıyı kullanmayı mantıklı buluyor. Ancak bunun üzerine yapılan çalışmaların geniş skalalarda olamadığını belirtiyorlar.</p>
                 
-                <h2>Modern Minimalism</h2>
+                <p>Çünkü gerçekten düzgünce çalışabilecek ve programlanabilecek bir "memristör crossbar array" tasarlarken memristörde yapısındaki malzemelerin kullanımını zorlu buluyorlar. Yaptıkları el yazması rakamları tanıma testinde, 89.9% kesinliğe ulaştıklarını ve bir çipe dönüştürülecek olursa 1 watt'ta saniyede 100 trilyon işleme ulaşabilmesinin mümkün olduğunu belirtiyorlar.</p>
                 
-                <p>Tokyo's design scene shows that minimalism doesn't mean cold or sterile. The city's approach combines restraint with warmth, simplicity with depth. Materials are chosen thoughtfully, textures are varied, and the result is spaces that feel both refined and human.</p>
+                <h3>Memristör Crossbar Array</h3>
                 
-                <p>These observations have deeply influenced my approach to design: respecting tradition while innovating, paying attention to details that others might overlook, and always considering the full experience of the user.</p>
-            `
-        },
-        'post-3': {
-            title: 'Building Design Systems That Scale',
-            date: 'December 28, 2024',
-            content: `
-                <p>A design system is more than a collection of components—it's a shared language that enables teams to build consistently and efficiently at scale. But creating one that actually works requires careful planning and ongoing maintenance.</p>
+                <p>Memristör crossbar array vektör-matris çarpımı için kullanılabilen bir elektronik devredir. Örneğin V x G = I için; V, n elemanlı bir sütun vektör. G, memristörlerin iletkenliğinden oluşan n x r bir matris. I ise bu vektör ve matrisin çarpımı olan n elemanlı bir satır matrisi. Fiziksel bir devrede ise her memristörün üzerindeki I değeri alt alta kümülatif olarak toplanır ve I satır matrisini bulabiliriz.</p>
                 
-                <h2>Foundation First</h2>
+                <h2>3. Sonuç</h2>
                 
-                <p>Before diving into components, establish your foundations: typography scales, color palettes, spacing systems, and grid structures. These fundamental elements inform everything else and ensure consistency across all touchpoints.</p>
+                <p>Görüldüğü üzere derin öğrenme algoritmaları, analog bilgisayarların eksilerinden sonuçları değiştirecek kadar etkilenmiyor. Bu yüzden bu alanda çalışanlar analog bilgisayarlarla hızlandırılmış derin öğrenme donanımlarının ileride oldukça iyi yerlere geleceğini düşünüyorlar.</p>
                 
-                <p>Documentation is crucial from day one. If team members can't easily understand how to use the system, it won't be adopted. Clear examples, usage guidelines, and accessibility standards should be part of every component.</p>
+                <p>Oldukça heyecan verici olan bu araştırma ve gelişmelerin ileride yapay zekanın geleceğini önemli ölçüde etkileyeceğini düşünüyorum.</p>
                 
-                <h2>Living Systems</h2>
+                <h2>Referanslar</h2>
                 
-                <p>Design systems must evolve. As products grow and user needs change, the system should adapt. Build in processes for proposing changes, versioning updates, and deprecating outdated patterns.</p>
-                
-                <p>The most successful design systems I've worked with treat their components as products themselves, with dedicated teams, user feedback loops, and regular iterations based on real-world usage.</p>
-                
-                <h2>Adoption Strategies</h2>
-                
-                <p>Technical excellence means nothing if people don't use your system. Focus on developer experience, provide clear migration paths, and celebrate teams that adopt the system successfully.</p>
-                
-                <p>Remember: a design system's value isn't measured by how comprehensive it is, but by how well it empowers teams to build great products faster.</p>
-            `
-        },
-        'post-4': {
-            title: 'On Creative Process',
-            date: 'December 20, 2024',
-            content: `
-                <p>Creative work isn't about waiting for inspiration to strike—it's about developing sustainable practices that allow consistent output while maintaining quality and preventing burnout.</p>
-                
-                <h2>Structure Enables Creativity</h2>
-                
-                <p>Paradoxically, constraints and structure often lead to more creative outcomes than complete freedom. Setting clear boundaries for a project forces you to think creatively within those limits.</p>
-                
-                <p>I've found that establishing regular working rhythms—specific times for deep work, breaks, and reflection—creates a foundation that allows creativity to flourish rather than relying on unpredictable bursts of inspiration.</p>
-                
-                <h2>The Role of Iteration</h2>
-                
-                <p>First drafts are rarely perfect, and that's okay. The creative process is iterative. Each version builds on the last, refining ideas and discovering solutions that weren't visible at the start.</p>
-                
-                <p>Embrace the messy middle. The period between initial concept and final polish is where real creative work happens—where problems are solved and ideas are transformed into reality.</p>
-                
-                <h2>Knowing When to Stop</h2>
-                
-                <p>Perhaps the hardest skill in creative work is knowing when something is finished. Perfectionism can become a trap that prevents shipping. Learn to recognize when additional iterations yield diminishing returns.</p>
-                
-                <p>A sustainable creative practice means balancing the pursuit of excellence with the necessity of completion, always keeping in mind that done is better than perfect.</p>
-            `
-        },
-        'post-5': {
-            title: 'Wandering Through Copenhagen',
-            date: 'December 5, 2024',
-            content: `
-                <p>Copenhagen embodies the Danish concept of "hygge"—a sense of coziness and contentment—not just in its cafes and homes, but in its approach to urban design and public spaces.</p>
-                
-                <h2>Human-Centered Urbanism</h2>
-                
-                <p>The city's design prioritizes people over cars. Wide bike lanes, pedestrian-only streets, and abundant public seating create a urban environment that feels welcoming and livable.</p>
-                
-                <p>Every detail seems considered: the subtle slope of building facades that maximizes natural light, the careful selection of materials that age beautifully, the integration of green spaces throughout the urban fabric.</p>
-                
-                <h2>Scandinavian Design Philosophy</h2>
-                
-                <p>Visiting design studios and museums here revealed a consistent thread: functionality and beauty aren't opposing forces. Good design serves a purpose while being aesthetically pleasing.</p>
-                
-                <p>The emphasis on natural materials—wood, wool, leather—combined with clean lines and thoughtful proportions creates spaces that feel both sophisticated and approachable. There's an honesty to the design that resonates.</p>
-                
-                <h2>Lessons for Digital Design</h2>
-                
-                <p>Walking through Copenhagen's streets offered numerous insights applicable to digital design: the importance of clear wayfinding, the value of consistent patterns, and the power of restraint.</p>
-                
-                <p>The city reminded me that the best design often goes unnoticed—it simply works, creating experiences that feel natural and effortless, supporting people's activities without demanding attention for itself.</p>
+                <ol style="font-size: 14px; line-height: 1.6; color: #666;">
+                    <li>Haensch, W., Gokmen, T., & Puri, R. (2018). The next generation of deep learning hardware: Analog computing. <em>Proceedings of the IEEE, 107</em>(1), 108-122. doi: 10.1109/JPROC.2018.2871057.</li>
+                    
+                    <li>Hu, M., Graves, C. E., Li, C., Li, Y., Ge, N., Montgomery, E., ... & Strachan, J. P. (2018). Memristor‐based analog computation and neural network classification with a dot product engine. <em>Advanced Materials, 30</em>(9), 1705914. https://doi.org/10.1002/adma.201705914</li>
+                    
+                    <li>A. Shafiee et al., "ISAAC: A Convolutional Neural Network Accelerator with In-Situ Analog Arithmetic in Crossbars," <em>2016 ACM/IEEE 43rd Annual International Symposium on Computer Architecture (ISCA)</em>, 2016, pp. 14-26, doi: 10.1109/ISCA.2016.12.</li>
+                    
+                    <li>Kim, H., Kim, T., Kim, J., & Kim, J. J. (2018). Deep neural network optimized to resistive memory with nonlinear current-voltage characteristics. <em>ACM Journal on Emerging Technologies in Computing Systems (JETC), 14</em>(2), 1-17. https://doi.org/10.48550/arXiv.1703.10642</li>
+                    
+                    <li>MythicAI CTO/Founder blog post: https://medium.com/mythic-ai/mythic-hot-chips-2018-637dfb9e38b7</li>
+                </ol>
             `
         }
     };

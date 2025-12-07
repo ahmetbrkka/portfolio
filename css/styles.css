@@ -1004,3 +1004,19 @@ section {
     border-top: 1px solid var(--light-gray);
     margin-top: 80px;
 }
+
+/* ================================
+   BLOG POST REFERENCES
+   ================================ */
+.post-body ol {
+    margin-left: 24px;
+    margin-top: 24px;
+}
+
+.post-body ol li {
+    margin-bottom: 16px;
+}
+
+.post-body em {
+    font-style: italic;
+}
