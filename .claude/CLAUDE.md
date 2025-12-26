@@ -4,71 +4,72 @@ Personal portfolio for Ahmet Burak Kara at www.akara.engineer
 
 ---
 
-## How to Edit Content
+## Edit Content
 
-### All content lives in `js/content.js`
-
-Edit the file, save, refresh browser. Done.
+All content lives in `js/content.js`. Edit, save, refresh browser.
 
 ```javascript
 const content = {
-  hero: { name, title, tagline },
-  about: { text, image },
-  experiences: [{ title, company, period, description, location }],
-  projects: [{ title, description, tools, link, publications }],
-  publications: [{ title, authors, venue, year, pdf, type }],
+  hero: { name, statement },
+  about: { text[], image, cvLink },
+  work: [{ title, version, period, metadata, stack[], description, publications[] }],
+  experiences: [{ title, company, period, location, description[] }],
   skills: { "Category": ["skill1", "skill2"] },
   contact: { email, linkedin, github }
 }
+
+// SVG icons, links, and labels in CONFIG object
 ```
 
 ---
 
 ## Common Tasks
 
-### Add a Project
-
-Edit `js/content.js`:
+**Add Work Item:**
 ```javascript
-projects: [
-  {
-    title: "Project Name",
-    description: "Brief description",
-    tools: ["Python", "Docker"],
-    link: "https://github.com/...",
-    publications: ["pub-id"] // optional
-  }
-]
+work: [{
+  title: "Project Name",
+  version: "v1.0",  // optional
+  period: "2024-2025",
+  metadata: "Company | Context",
+  stack: ["Python", "Docker"],
+  description: "What you built...",
+  publications: [{ title: "Paper", url: "path.pdf" }]
+}]
 ```
 
-### Add Work Experience
-
+**Add Experience:**
 ```javascript
-experiences: [
-  {
-    title: "Job Title",
-    company: "Company Name",
-    period: "Jan 2024 - Present",
-    location: "City, Country",
-    description: "What you did..."
-  }
-]
+experiences: [{
+  title: "Job Title",
+  company: "Company Name",
+  period: "Jan 2024 - Present",
+  location: "City, Country",
+  description: ["Point 1", "Point 2"]
+}]
 ```
 
-### Change Colors
+**Change Colors:**
+Edit `:root` variables in `css/styles.css`
 
-Edit `css/styles.css`:
-```css
-:root {
-  --color-bg: #ffffff;
-  --color-text: #000000;
-  --color-accent: #666666;
-}
-```
+**Replace CV:**
+Replace `assets/cv.pdf` (keep filename)
 
-### Replace CV
+---
 
-Replace `assets/cv.pdf` with new file (keep filename)
+## Architecture
+
+**Structure:**
+- `index.html` - Minimal HTML skeleton
+- `css/styles.css` - All styles with CSS variables
+- `js/content.js` - All content + CONFIG constants
+- `js/main.js` - Render functions + utilities
+
+**Key Features:**
+- No hardcoded values (use variables)
+- Reusable utility functions
+- No duplicate code
+- Hidden scrollbar, responsive
 
 ---
 
@@ -84,30 +85,4 @@ Open http://localhost:8000
 
 ## Deployment
 
-Push to `main` branch on GitHub.
-Site auto-deploys to www.akara.engineer via GitHub Pages.
-
----
-
-## File Structure
-
-```
-/
-├── index.html          HTML structure
-├── css/styles.css      All styles
-├── js/
-│   ├── content.js      Edit this for content updates
-│   └── main.js         Render logic
-└── assets/
-    ├── images/
-    ├── cv.pdf
-    └── publications/
-```
-
----
-
-## Quick Reference
-
-**Edit content:** `js/content.js`
-**Edit styles:** `css/styles.css`
-**Deploy:** Push to `main`
+Push to `main` → auto-deploys to www.akara.engineer via GitHub Pages
