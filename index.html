@@ -5,332 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
     <title>Ahmet Burak Kara - Portfolio</title>
-    
-    <!-- Favicons -->
+
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="logo logo-empty-mode" onclick="showPage('professional'); return false;">
+        <a href="#" class="logo">
             <span class="logo-text">Ahmet Burak Kara</span>
         </a>
         <ul class="nav-links">
-            <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
-            <li><a href="#experiences" onclick="scrollToSection('experiences'); return false;">Experiences</a></li>
-            <li><a href="#projects" onclick="scrollToSection('projects'); return false;">Projects</a></li>
-            <li><a href="#skills" onclick="scrollToSection('skills'); return false;">Skills</a></li>
-            <li class="has-dropdown">
-                <a href="#" onclick="showPage('blog'); return false;">Blog</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" onclick="goToBlogSection('blog-header'); return false;">Writings</a></li>
-                    <li><a href="#" onclick="goToBlogSection('gallery'); return false;">Gallery</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="hamburger" onclick="toggleMobileMenu()">
+        <button class="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </button>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <button class="close-menu" onclick="toggleMobileMenu()">×</button>
-        <a href="#about" onclick="scrollToSection('about'); toggleMobileMenu(); return false;">About</a>
-        <a href="#experiences" onclick="scrollToSection('experiences'); toggleMobileMenu(); return false;">Experiences</a>
-        <a href="#projects" onclick="scrollToSection('projects'); toggleMobileMenu(); return false;">Projects</a>
-        <a href="#skills" onclick="scrollToSection('skills'); toggleMobileMenu(); return false;">Skills</a>
-        <a href="#" onclick="showPage('blog'); toggleMobileMenu(); return false;">Blog</a>
-        <a href="#" onclick="goToBlogSection('blog-header'); toggleMobileMenu(); return false;">Writings</a>
-        <a href="#" onclick="goToBlogSection('gallery'); toggleMobileMenu(); return false;">Gallery</a>
-        <a href="#contact" onclick="scrollToSection('contact'); toggleMobileMenu(); return false;">Contact</a>
+        <button class="close-menu">×</button>
+        <a href="#about">About</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </div>
 
-    <!-- Professional Page -->
-    <div id="professionalPage" class="page active">
-        <!-- Hero Section -->
-        <section id="hero">
-            <h1>Ahmet Burak Kara</h1>
-            <p>Engineer & Designer</p>
-        </section>
+    <section id="hero"></section>
 
-        <!-- About Section -->
-        <section id="about" class="reveal-on-scroll">
-            <div class="section-container">
-                <div class="about-photo-wrapper">
-                    <div class="about-photo-circle">
-                        <img src="assets/profile-about.jpg" alt="Profile photo">
-                    </div>
-                </div>
-                
-                <h2 class="section-title">About</h2>
-                <p>As an avid engineering enthusiast, I'm constantly exploring and expanding my knowledge and skills in the field.</p>
-                <p>My passion for finding innovative solutions to complex problems has led me to work on exciting projects in electronics, mechanics, software development, and AI.</p>
-                <p>I'm particularly fascinated by the potential of AI to transform the way we live and work.</p>
-                <p>For me, engineering is not just a career, it's a passion.</p>
-                
-                <a href="assets/cv.pdf" class="button cv-button" download>
-                    Download my CV
-                </a>
-            </div>
-        </section>
+    <section id="about">
+        <div class="section-container"></div>
+    </section>
 
-        <!-- Experiences Section -->
-        <section id="experiences">
-            <div class="section-container">
-                <h2 class="section-title">Experiences</h2>
-                
-                <div class="experience reveal-on-scroll">
-                    <h3>TUSAS Engine Industries Inc. (TEI) – Eskisehir, Turkey </h3>
-                    <div class="role">Engineering Intern</div>
-                    <div class="time">August 2024 - September 2024</div>
-                    <ul>
-                        <li>Worked with both embedded software design and hardware design teams.</li>
-                        <li>Gained experience in developing safety-critcal aviaton software with DO-178C standards.</li>
-                    </ul>
-                </div>
+    <section id="experiences">
+        <div class="section-container"></div>
+    </section>
 
-                <div class="experience reveal-on-scroll">
-                    <h3>BMC Otomotiv Sanayi ve Ticaret A.Ş. – Izmir, Turkey</h3>
-                    <div class="role">Engineering Intern</div>
-                    <div class="time">August 2023 - September 2023</div>
-                    <ul>
-                        <li>Done my summer internshp at BMC Automotive's R&D department, involved in the development of an autonomous miltary vehicle.</li>
-                        <li>Contributed to both hardware and software aspects of the project, collaborating closely wth interdisciplinary teams.</li>
-                        <li>Gained experience using path-finding algorithms such as A* and RRT using the C/C++ programming language.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <section id="projects">
+        <div class="section-container"></div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <div class="section-container">
-                <div class="section-header projects-header">
-                    <h2 class="section-title">Projects</h2>
-                    <button class="text-link all-projects-link" type="button" onclick="showPage('all-projects'); return false;">
-                        All
-                    </button>
-                </div>
-                <div class="projects-grid">
-                    <div class="project reveal-on-scroll">
-                        <h3>Distributed Computation on GPUs | TUSAŞ LiftUp | Supported by TÜBİTAK 2209-B | 2025</h3>
-                        <p>Developed a distributed training infrastructure enabling heterogeneous GPU nodes at TUSAŞ to collaboratively train deep learning models over a custom TCP-based communication layer. Reverse-engineered the YOLOv8 training pipeline to identify synchronization points and designed a socket-based protocol for efficient parameter and loss exchange across nodes. Implemented CPU/GPU benchmarking modules, hardware-eligibility checks, dynamic workload scheduling, and GPU-accelerated parameter aggregation to optimize performance on asymmetric systems. Experiments demonstrated up to 73% convergence toward ideal training time, significantly reducing model training duration and improving resource utilization. The project was funded by the TÜBİTAK 2209-B Research Support Program, recognizing its innovation and applicability within TUSAŞ’s distributed computing environment.</p>
-                        <div class="tools">C/C++, Python, YoloV8</div>                        <div class="project-publications">
-                            <span class="project-publications-label">Publications</span>
-                            <a href="assets/distributed-computing-thesis.pdf" class="project-publication-link" target="_blank" rel="noopener noreferrer">BSc Graduation Thesis</a>
-                            <a href="assets/distributed-computing-tusas-paper.pdf" class="project-publication-link" target="_blank" rel="noopener noreferrer">TUSAŞ Conference Paper</a>
-                        </div>                    </div>
+    <section id="skills">
+        <div class="section-container"></div>
+    </section>
 
-                    <div class="project reveal-on-scroll">
-                        <h3>École 42 Piscine & Core Program</h3>
-                        <p> Selected for the École 42 Istanbul intensive Piscine program and successfully completed the highly competitive 1-month training based on peer-to-peer and project-driven learning. Expanded C programming proficiency by implementing core standard library functions from scratch and completing collaborative system-level tasks.After ranking high enough to pass the Piscine, advanced to the main curriculum, where I developed low-level memory manipulation algorithms and strengthened my foundations in problem-solving, debugging, and team-based software development.</p>
-                        <div class="tools">C/C++, Shell, Algorithms and Data Structures</div>
-                    </div>
+    <section id="contact">
+        <div class="section-container"></div>
+    </section>
 
-                    <div class="project reveal-on-scroll">
-                        <h3>Autonomous Unmanned Surface Vehicle (Teknofest 2019 – Finalist)</h3>
-                        <p>During high school, completed electronics, Arduino, C, and Python training under the instruction of Dr. Tankut Akgül. Formed a three-person engineering team and competed in Teknofest 2019’s “Robotik Fetih 1453” challenge with an autonomous unmanned surface vehicle (USV).As team leader, coordinated project direction and team motivation while focusing on computer vision and systems integration. Developed the vessel’s object-detection and mission-execution capabilities using OpenCV, NumPy, and custom C-based modules. The USV successfully navigated between red vessels, autonomously retrieved designated green targets, and operated an onboard projectile mechanism to complete mission objectives. The project advanced to the finalist stage of the national competition.</p>
-                        <div class="tools">C/C++, Python</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="reveal-on-scroll">
-            <div class="section-container">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-grid">
-                    <div>
-                        <div class="skill-category">
-                            <h3>Technical Skills</h3>
-                            <ul>
-                                <li>Control Systems Design</li>
-                                <li>Robotics</li>
-                                <li>ML/DL</li>
-                                <li>Autonomous Systems</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Software & Tools</h3>
-                            <ul>
-                                <li>C/C++</li>
-                                <li>Python</li>
-                                <li>SolidWorks</li>
-                                <li>Proteus</li>
-                                <li>AutoCAD</li>
-                                <li>Adobe Photoshop</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="skill-category">
-                            <h3>Languages</h3>
-                            <ul>
-                                <li>Turkish (Native)</li>
-                                <li>English (Fluent)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="reveal-on-scroll">
-            <div class="section-container">
-                <h2 class="section-title">Contact</h2>
-                <a href="mailto:akara.engineer@gmail.com">akara.engineer@gmail.com</a>
-                <a href="https://www.linkedin.com/in/abkara/" target="_blank">linkedin.com/in/abkara</a>
-                <a href="https://github.com/ahmetbrkka" target="_blank">github.com/ahmetbrkka</a>
-            </div>
-        </section>
-    </div>
-
-    <!-- Blog Page -->
-    <div id="blogPage" class="page">
-        <!-- Blog Header -->
-        <section id="blog-header">
-            <div class="section-container">
-                <h2 class="section-title">Writings</h2>
-                <input type="text" class="search-bar" placeholder="Search writings..." id="searchInput" oninput="searchPosts()">
-                <div class="filters">
-                    <button class="active" data-filter="all" onclick="filterPosts('all')">All</button>
-                    <button data-filter="professional" onclick="filterPosts('professional')">Professional</button>
-                    <button data-filter="travel" onclick="filterPosts('travel')">Travel</button>
-                    <button data-filter="notes" onclick="filterPosts('notes')">Notes</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Blog Posts -->
-        <section id="blog-posts">
-            <div class="section-container">
-                <div class="post-preview reveal-on-scroll" data-category="professional">
-                    <div class="post-header">
-                        <h2>Analog Bilgisayarlar İle Derin Öğrenme</h2>
-                        <button class="text-link read-all-button" type="button" onclick="openBlogPost('post-1'); return false;">
-                            Read all
-                        </button>
-                    </div>
-                    <p>Derin öğrenme modelleri büyüdükçe, hesaplama gücü kadar elektrik faturasının da şiştiği bir noktaya gelindi. Sorunu yalnızca daha güçlü GPU’larla çözmek yerine, hesaplamayı analog dünyaya taşıyan memristör tabanlı crossbar devreleri öne çıkıyor. Ağırlıkların iletkenlik olarak saklandığı ve matris–vektör çarpımının fiziksel olarak I=G⋅V biçiminde gerçekleştiği bu yaklaşımın, derin ağlar için sunduğu enerji verimliliği ve yaklaşık hesaba tolerans gibi avantajları güncel çalışmalar üzerinden ele alınıyor.</p>
-                    <div class="date">January 10, 2023</div>
-                </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery" style="padding-top: 120px;">
-            <div style="max-width: 1400px; margin: 0 auto; padding: 0 80px;">
-                <h2 class="section-title" style="margin-bottom: 64px;">Gallery</h2>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(0)">
-                    <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=800&fit=crop" alt="Gallery image 1">
-                </div>
-                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(1)">
-                    <img src="https://images.unsplash.com/photo-1682687221038-404cb8830901?w=800&h=800&fit=crop" alt="Gallery image 2">
-                </div>
-                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(2)">
-                    <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=800&h=800&fit=crop" alt="Gallery image 3">
-                </div>
-                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(3)">
-                    <img src="https://images.unsplash.com/photo-1682687220566-5599dbbebf11?w=800&h=800&fit=crop" alt="Gallery image 4">
-                </div>
-                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(4)">
-                    <img src="https://images.unsplash.com/photo-1682687221080-5cb261c645cb?w=800&h=800&fit=crop" alt="Gallery image 5">
-                </div>
-                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(5)">
-                    <img src="https://images.unsplash.com/photo-1682687220801-eef408f95d71?w=800&h=800&fit=crop" alt="Gallery image 6">
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- All Projects Page -->
-    <div id="allProjectsPage" class="page">
-        <section id="all-projects-hero">
-            <div class="section-container">
-                <h1 class="page-heading">All Projects</h1>
-                <p class="page-subheading">A comprehensive collection of my work spanning engineering, design, development, and research initiatives.</p>
-                <button class="text-link back-link" type="button" onclick="showPage('professional'); scrollToSection('projects'); return false;">
-                    ← Back to Featured
-                </button>
-            </div>
-        </section>
-        
-        <section id="all-projects-grid">
-            <div class="section-container">
-                <div class="projects-grid">
-                    <!-- Featured projects repeated -->
-                    <div class="project reveal-on-scroll">
-                        <h3>Distributed Computation on GPUs | TUSAŞ LiftUp | Supported by TÜBİTAK 2209-B | 2025</h3>
-                        <p>Developed a distributed training infrastructure enabling heterogeneous GPU nodes at TUSAŞ to collaboratively train deep learning models over a custom TCP-based communication layer. Reverse-engineered the YOLOv8 training pipeline to identify synchronization points and designed a socket-based protocol for efficient parameter and loss exchange across nodes. Implemented CPU/GPU benchmarking modules, hardware-eligibility checks, dynamic workload scheduling, and GPU-accelerated parameter aggregation to optimize performance on asymmetric systems. Experiments demonstrated up to 73% convergence toward ideal training time, significantly reducing model training duration and improving resource utilization. The project was funded by the TÜBİTAK 2209-B Research Support Program, recognizing its innovation and applicability within TUSAŞ’s distributed computing environment.</p>
-                        <div class="tools">C/C++, Python, YoloV8</div>
-                        <div class="project-publications">
-                            <span class="project-publications-label">Publications</span>
-                            <a href="assets/distributed-computing-thesis.pdf" class="project-publication-link" target="_blank" rel="noopener noreferrer">BSc Graduation Thesis</a>
-                            <a href="assets/distributed-computing-tusas-paper.pdf" class="project-publication-link" target="_blank" rel="noopener noreferrer">TUSAŞ Conference Paper</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project reveal-on-scroll">
-                        <h3>École 42 Piscine & Core Program</h3>
-                        <p> Selected for the École 42 Istanbul intensive Piscine program and successfully completed the highly competitive 1-month training based on peer-to-peer and project-driven learning. Expanded C programming proficiency by implementing core standard library functions from scratch and completing collaborative system-level tasks.After ranking high enough to pass the Piscine, advanced to the main curriculum, where I developed low-level memory manipulation algorithms and strengthened my foundations in problem-solving, debugging, and team-based software development.</p>
-                        <div class="tools">C/C++, Python, Algorithms and Data Structures</Data></div>
-                    </div>
-                    
-                    <div class="project reveal-on-scroll">
-                        <h3>Autonomous Unmanned Surface Vehicle (Teknofest 2019 – Finalist)</h3>
-                        <p>During high school, completed electronics, Arduino, C, and Python training under the instruction of Dr. Tankut Akgül. Formed a three-person engineering team and competed in Teknofest 2019’s “Robotik Fetih 1453” challenge with an autonomous unmanned surface vehicle (USV).As team leader, coordinated project direction and team motivation while focusing on computer vision and systems integration. Developed the vessel’s object-detection and mission-execution capabilities using OpenCV, NumPy, and custom C-based modules. The USV successfully navigated between red vessels, autonomously retrieved designated green targets, and operated an onboard projectile mechanism to complete mission objectives. The project advanced to the finalist stage of the national competition.</p>
-                        <div class="tools">C/C++, Python</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- Blog Post Detail Page -->
-    <div id="blogPostPage" class="page">
-        <section id="blog-post-detail">
-            <div class="section-container blog-post-container">
-                <button class="text-link back-link" type="button" onclick="showPage('blog'); return false;">
-                    ← Back to Blog
-                </button>
-                
-                <article id="postContent">
-                    <h1 class="post-title">Post Title</h1>
-                    <div class="post-meta">
-                        <span class="post-date">Date</span>
-                    </div>
-                    <div class="post-body">
-                        <p>Post content will be loaded here...</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </div>
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()">×</button>
-        <button class="lightbox-nav prev" onclick="prevImage()">‹</button>
-        <img id="lightboxImg" src="" alt="Lightbox image">
-        <button class="lightbox-nav next" onclick="nextImage()">›</button>
-    </div>
-
-    <!-- Footer -->
     <footer class="site-footer">
         Designed by Ahmet Burak Kara
     </footer>
-    <script src="js/script.js"></script>
-    
+
+    <script src="js/content.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
