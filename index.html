@@ -30,6 +30,11 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 
+    <!-- Inline so the scrollbar never flashes before the external stylesheet loads -->
+    <style>
+        html, body { scrollbar-width: none; -ms-overflow-style: none; }
+        html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
+    </style>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>

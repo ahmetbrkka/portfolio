@@ -46,6 +46,16 @@ const content = {
   experiences: [
     {
       title: "Engineering Intern",
+      company: "Baykar Technologies",
+      current: true,
+      period: "August 2026 - Present",
+      location: "Istanbul, Turkey",
+      description: [
+        "Working in the engine technologies division."
+      ]
+    },
+    {
+      title: "Engineering Intern",
       company: "TUSAS Engine Industries Inc. (TEI)",
       period: "August 2024 - September 2024",
       location: "Eskisehir, Turkey",

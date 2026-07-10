@@ -44,10 +44,14 @@ function renderWorkItem(project) {
 
 function renderExperienceItem(exp) {
   const descriptionHTML = mapToHTML(exp.description, item => createElement('p', item));
+  const meta = [exp.title, exp.period, exp.location].filter(Boolean).join(' | ');
+  const currentBadge = exp.current
+    ? ' <span class="work-current-badge">Currently working here</span>'
+    : '';
   return `
     <div class="work-item">
-      ${createElement('h3', exp.company)}
-      ${createElement('div', `${exp.title} | ${exp.period} | ${exp.location}`, 'work-meta')}
+      ${createElement('h3', `${exp.company}${currentBadge}`)}
+      ${createElement('div', meta, 'work-meta')}
       ${descriptionHTML}
     </div>
   `;

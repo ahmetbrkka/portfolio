@@ -22,12 +22,19 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     width: 100%;
+}
+
+html,
+body {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
 }
 
-html::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
+    width: 0;
+    height: 0;
 }
 
 /* ================================
@@ -43,6 +50,7 @@ html::-webkit-scrollbar {
     --text-secondary-dark: #b89968;
     --accent: #c9a067;
     --accent-warm: #c9a067;
+    --accent-active: #8a9a6b;
     --border-light: #d4c4b0;
     --border-dark: #3d3530;
 
@@ -345,6 +353,32 @@ section {
     letter-spacing: 0.05em;
     margin-left: 8px;
     vertical-align: middle;
+}
+
+.work-current-badge {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--text-secondary-light);
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 5px 12px;
+    margin-left: 12px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.work-current-badge::before {
+    content: '●';
+    color: var(--accent-active);
+    font-size: 0.55rem;
+    margin-right: 6px;
+    vertical-align: 1px;
 }
 
 .work-meta {
