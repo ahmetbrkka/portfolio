@@ -47,11 +47,10 @@ const content = {
     {
       title: "Engineering Intern",
       company: "Baykar Technologies",
-      current: true,
-      period: "August 2026 - Present",
+      period: "August 2026 - September 2026",
       location: "Istanbul, Turkey",
       description: [
-        "Working in the engine technologies division."
+        "Worked in the engine technologies division."
       ]
     },
     {
